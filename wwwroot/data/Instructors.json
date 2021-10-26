@@ -1,0 +1,24 @@
+[
+  {
+    "InstructorId": "PROF-2021-001",
+    "IFirstName": "Reed",
+    "ILastName": "Richards",
+    "IEmailAddress": "Reed.Richards@Marvel.com",
+    "ICourseMaster": "Science"
+  },
+  {
+    "InstructorId": "PROF-2021-002",
+    "IFirstName": "Charles",
+    "ILastName": "Xavier",
+    "IEmailAddress": "Charles.Xavier@Marvel.com",
+    "ICourseMaster": "Psychology"
+  },
+  {
+    "InstructorId": "PROF-2021-003",
+    "IFirstName": "Bruce",
+    "ILastName": "Banner",
+    "IEmailAddress": "Bruce.Banner@Marvel.com",
+    "ICourseMaster": "Physics"
+  }
+]
+

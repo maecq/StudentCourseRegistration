@@ -1,0 +1,31 @@
+﻿@page
+@model StudentCourseRegistration.Pages.InstructorsModel
+@{
+    ViewData["Title"] = "Instructors";
+}
+
+<h1>instructors</h1>
+
+<table class="table table-bordered">
+    <thead>
+        <tr>
+            <th>INSTRUCTOR ID</th>
+            <th>LAST NAME</th>
+            <th>FIRST NAME</th>
+            <th>EMAIL ADDRESS</th>
+            <th>COURSE MASTER</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var instructor in Model.Instructors)
+        {
+            <tr>
+                <th scope="row">@instructor.InstructorId</th>
+                <td>@instructor.ILastName</td>
+                <td>@instructor.IFirstName</td>
+                <td>@instructor.IEmailAddress</td>
+                <td>@instructor.ICourseMaster</td>
+            </tr>
+        }
+    </tbody>
+</table>

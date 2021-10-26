@@ -1,0 +1,18 @@
+[
+  {
+    "CourseId": "COURSE-2021-001",
+    "CourseName": "Science",
+    "CourseDescription": "Science Description"
+  },
+  {
+    "CourseId": "COURSE-2021-002",
+    "CourseName": "Psychology",
+    "CourseDescription": "Psychology Description"
+  },
+  {
+    "CourseId": "COURSE-2021-003",
+    "CourseName": "Physics",
+    "CourseDescription": "Physics Description"
+  }
+]
+

@@ -1,0 +1,27 @@
+﻿@page
+@model StudentCourseRegistration.Pages.CoursesModel
+@{
+    ViewData["Title"] = "Courses";
+}
+
+<h1>Courses</h1>
+
+<table class="table table-bordered">
+    <thead>
+        <tr>
+            <th>Course ID</th>
+            <th>COURSE NAME</th>
+            <th>COURSE DESCRIPTION</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var course in Model.Courses) 
+        {
+            <tr>
+                <th scope="row">@course.CourseId</th>
+                <td>@course.CourseName</td>
+                <td>@course.CourseDescription</td>
+            </tr>
+        }
+    </tbody>
+</table>

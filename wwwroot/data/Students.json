@@ -1,0 +1,27 @@
+[
+  {
+    "StudentId": "ST-2021-001",
+    "FirstName": "Tony",
+    "LastName": "Stark",
+    "EmailAddress": "Tony.Stark@Marvel.com",
+    "CourseName": "Science",
+    "PhoneNumber": "1-888-999-9999"
+  },
+  {
+    "StudentId": "ST-2021-002",
+    "FirstName": "Steve",
+    "LastName": "Rogers",
+    "EmailAddress": "Steve.Rogers@Marvel.com",
+    "CourseName": "History",
+    "PhoneNumber": "1-888-999-9999"
+  },
+  {
+    "StudentId": "ST-2021-003",
+    "FirstName": "Thor",
+    "LastName": "Odinson",
+    "EmailAddress": "Thor.Odinson@Marvel.com",
+    "CourseName": "Geography",
+    "PhoneNumber": "1-888-999-9999"
+  }
+]
+
