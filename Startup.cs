@@ -14,6 +14,7 @@ using StudentCourseRegistration.Data;
 using System.Text.Json;
 using StudentCourseRegistration.Models;
 using Microsoft.AspNetCore.Http;
+using StudentCourseRegistration.Mock;
 
 namespace StudentCourseRegistration
 {
@@ -33,8 +34,10 @@ namespace StudentCourseRegistration
             services.AddTransient<JsonFileCoursesService>();
             services.AddTransient<JsonFileInstructorsService>();
             services.AddTransient<JsonFileStudentsService>();
+            services.AddTransient<JsonFileStudentCourseServices>();
             services.AddControllers();
             services.AddServerSideBlazor();
+            services.AddSingleton<IStudentCourseData, MockStudentCourseData>();
 
             services.AddDbContext<StudentCourseRegistrationContext>(options =>
                     options.UseSqlServer(Configuration.GetConnectionString("StudentCourseRegistrationContext")));
@@ -68,8 +71,8 @@ namespace StudentCourseRegistration
                 endpoints.MapBlazorHub();
                 //endpoints.MapGet("/instructors", (context) =>
                 //{
-                //    var instructors = app.ApplicationServices.GetService<JsonFileInstructorsService>().GetInstructors();
-                //    var json = JsonSerializer.Serialize<IEnumerable<Instructor>>(instructors);
+                //    var registeredStudents = app.ApplicationServices.GetService<JsonFileStudentCourseServices>().GetStudentCourses();
+                //    var json = JsonSerializer.Serialize<IEnumerable<StudentCourse>>(registeredStudents);
                 //    return context.Response.WriteAsync(json);
                 //});
             });

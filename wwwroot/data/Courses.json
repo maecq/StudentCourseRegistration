@@ -13,6 +13,18 @@
     "CourseId": "COURSE-2021-003",
     "CourseName": "Physics",
     "CourseDescription": "Physics Description"
+  },
+  {
+    "CourseId": "COURSE-2021-004",
+    "CourseName": "Mathematics",
+    "CourseDescription": "Mathematics Description"
+  },
+  {
+    "CourseId": "COURSE-2021-005",
+    "CourseName": "Language",
+    "CourseDescription": "Language Description"
   }
+
+
 ]
 

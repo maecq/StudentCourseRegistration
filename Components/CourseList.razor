@@ -1,0 +1,83 @@
+﻿@using Microsoft.AspNetCore.Components.Web
+@using StudentCourseRegistration.Models
+@using StudentCourseRegistration.Services
+@inject JsonFileCoursesService CourseService
+
+<table class="table table-bordered">
+    <thead>
+        <tr>
+            <th>COURSE NAME</th>
+            <th>COURSE DESCRIPTION</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var course in CourseService.GetCourses())
+        {
+            <tr>
+                <td>
+                    <button @onclick="(e => SelectCourse(course.CourseId))"
+                            data-toggle="modal" data-target="#courseModal" class="btn btn-outline-primary">
+                        @course.CourseName
+                    </button>
+                </td>
+                <td>@course.CourseDescription</td>
+            </tr>
+        }
+    </tbody>
+
+</table>
+
+@if (selectedCourse != null)
+{
+    showStudents(selectedCourse.CourseId);
+
+    <div class="modal fade" id="courseModal" tabindex="-1" role="dialog" aria-labelledby="studentTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h6 class="modal-title" id="courseTitle">@selectedCourse.CourseName </h6> &nbsp; &nbsp; &nbsp;  [ @selectedCourse.CourseId ]
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="card">
+                        <div class="card-body">
+                            <h6>Registered Students:</h6>
+                            <p class="card-text"></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+}
+
+
+@code {
+
+    Course selectedCourse;
+    //string selectedCourseID;
+
+
+    void SelectCourse(string _courseId)
+    {
+        //selectedCourseID = _courseId;
+        selectedCourse = CourseService.GetCourses().First(x => x.CourseId == _courseId);
+    }
+
+
+    //JsonFileStudentCourseServices _studentCoursesService;
+    //StudentCourse selectedStudentCourse;
+
+    void showStudents(string id)
+    {
+    //    //selectedStudentCourse = _studentCoursesService.GetStudentCourses().First(x => x.CourseID == id);
+    }
+
+
+}

@@ -1,0 +1,17 @@
+﻿@page
+@using StudentCourseRegistration.Components
+
+model StudentCourseRegistration.Pages.StudentCourseModel
+
+@{
+    ViewData["Title"] = "StudentCourse";
+}
+
+<h6> Student Course Razor (Empty) page</h6>
+
+@(await Html.RenderComponentAsync<StudentCourse>(RenderMode.ServerPrerendered))
+
+<script src="_framework/blazor.server.js"></script>
+
+@{
+}

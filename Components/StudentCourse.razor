@@ -1,0 +1,28 @@
+﻿@using Microsoft.AspNetCore.Components.Web
+@using StudentCourseRegistration.Models
+@using StudentCourseRegistration.Services
+@inject JsonFileStudentCourseServices _studentCourseService
+
+<h3>StudentCourse</h3>
+
+<table class="table table-bordered">
+    <thead>
+        <tr>
+            <th>STUDENT ID</th>
+            <th>COURSE ID</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var sc in _studentCourseService.GetStudentCourses())
+            {
+                <tr>
+                    <td>@sc.StudentId</td>
+                    <td>@sc.CourseID</td>
+                </tr>
+            }
+    </tbody>
+</table>
+
+@code {
+
+}

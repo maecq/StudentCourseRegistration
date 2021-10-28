@@ -1,0 +1,34 @@
+[
+  {
+    "StudentId": "ST-2021-001",
+    "CourseID": "COURSE-2021-001"
+  },
+  {
+    "StudentId": "ST-2021-001",
+    "CourseID": "COURSE-2021-002"
+  },
+  {
+    "StudentId": "ST-2021-001",
+    "CourseID": "COURSE-2021-003"
+  },
+  {
+    "StudentId": "ST-2021-002",
+    "CourseID": "COURSE-2021-001"
+  },
+  {
+    "StudentId": "ST-2021-002",
+    "CourseID": "COURSE-2021-002"
+  },
+  {
+    "StudentId": "ST-2021-003",
+    "CourseID": "COURSE-2021-001"
+  },
+  {
+    "StudentId": "ST-2021-003",
+    "CourseID": "COURSE-2021-004"
+  }
+
+
+
+]
+
